@@ -1,0 +1,14 @@
+doctype html
+html  
+	head
+		title= title
+	body
+		h1= 'Simple Book Store'
+	if books
+	-for (book of books){
+		h2= book.title
+	-}
+		button= 'Add Book'
+		button= 'Update Book'
+		button= 'Find Book'
+		button= 'Delete Book'
