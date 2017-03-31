@@ -3,7 +3,7 @@ const connectionString = 'postgres://localhost:5432/bookstore';
 const db = pgp(connectionString);
 
 function getAllBooks() {
-	return db.any('SELECT * FROM books') 
+	return db.any('SELECT * FROM books')
 }
 
 function addBook(title, author, genre) {
@@ -11,10 +11,10 @@ function addBook(title, author, genre) {
 }
 
 function updateBook(bookId, title, author, genre) { //test if it works there were cases where it didn't
-	return  db.none(
-		'UPDATE books SET title = ${title}, author = ${author}, genre = ${genre} WHERE id = $1', bookId
-		)
-} 
+	return  db.one(
+		'UPDATE books SET title = $1, author = $2, genre = $3 WHERE id = $4 returning *', [title, author, genre, bookId]
+		)//to look up data
+}
 
 function findBook(bookId) {
 	return db.one('SELECT * FROM books WHERE id = $1', bookId)
@@ -25,9 +25,9 @@ function deleteBook(bookId) {
 }
 
 module.exports = {
-	getAllBooks, 
+	getAllBooks,
 	addBook,
 	updateBook,
-	findBook, 
-	deleteBook 
+	findBook,
+	deleteBook
 };
