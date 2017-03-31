@@ -6,4 +6,4 @@ CREATE TABLE books(
 	genre VARCHAR(20)
 );
 
-COPY books FROM '/Users/aaronvillanueva/Desktop/simple-book-store/books.csv' DELIMITER ',' CSV HEADER;
+COPY books FROM '/Users/a02100/Projects/lg/bkstrmain/simple-book-store/books.csv' DELIMITER ',' CSV HEADER;

@@ -1,0 +1,13 @@
+h2= bookId
+h2 this is bookId: #{bookId}
+form(method='POST' action= '/bookDetail/'+bookId)
+  label title
+    input(type= 'text', name= 'title')
+
+  label author
+    input(type= 'text', name= 'author')
+
+  label genre
+    input(type= 'text', name= 'genre')
+
+  button(type= 'submit')
