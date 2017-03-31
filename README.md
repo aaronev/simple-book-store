@@ -1,15 +1,17 @@
 <!-- https://github.com/GuildCrafts/web-development-js/blob/master/_goals/69-Simple_Book_Store.md -->
 
 Day 1:
-	- Understanding Express
-	- Creating Data Table
-	- Connecting Servers/Framework
-Day 2:
  	- Understanding SQL
- 	- Connecting SQL DB to HOST
-
-
-
+ 	- Connecting SQL database to host
+Day 2:
+  - Understanding pg-promise
+  - Creating function connecting SQL to pg-promise
+Day 3:
+  - Understanding Express
+  - Connecting pg-promise to express
+  - Start with express "app." functions
+Day 4:
+  - Finish as much as we can
 
   ## Description
 
@@ -43,8 +45,8 @@ Dependencies
 - [ ] Appropriate HTTP verbs are used for CRUD actions
   - [x] `GET` requests are only used for _read_ actions
   - [x] `POST` requests are only used for _create_ actions
-  - [ ] `PUT` or `PATCH` requests are only used for _update_ actions
-  - [ ] `DELETE` requests are only used for _delete_ actions
+  - [X] `PUT` or `PATCH` requests are only used for _update_ actions
+  - [X] `DELETE` requests are only used for _delete_ actions
 - [x] All views are rendered on the server using server-side templates written with [Pug][] or [EJS][]
 - [x] Web server can be started with the command `npm start`
 - [ ] Test suite can be run with the command `npm test`

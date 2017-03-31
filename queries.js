@@ -10,10 +10,10 @@ function addBook(title, author, genre) {
 	return db.none('INSERT INTO bookstore(title, author, genre) VALUES(${title}, ${author}, ${genre})')
 }
 
-function updateBook(bookId, title, author, genre) { //test if it works there were cases where it didn't
+function updateBook(bookId, title, author, genre) {
 	return  db.one(
 		'UPDATE books SET title = $1, author = $2, genre = $3 WHERE id = $4 returning *', [title, author, genre, bookId]
-		)//to look up data
+		)
 }
 
 function findBook(bookId) {
